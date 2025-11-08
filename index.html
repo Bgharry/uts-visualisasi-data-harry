@@ -1,0 +1,85 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Visualisasi Data Pengguna Media Sosial di Asia 2024</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="logo.svg" alt="UNSAP logo" class="logo">
+      <div class="titles">
+        <h1>Visualisasi Data Pengguna Media Sosial di Asia 2024</h1>
+        <div class="identity">Harry Zulkifli — 220660121081 — Informatika 7D</div>
+      </div>
+    </div>
+    <nav class="menu" aria-label="Navigasi visualisasi">
+      <button data-target="home" class="active">Beranda</button>
+      <button data-target="line">Line</button>
+      <button data-target="bar">Bar</button>
+      <button data-target="pie">Pie</button>
+      <button data-target="hist">Histogram</button>
+      <button data-target="scatter">Scatter</button>
+      <button data-target="map">Peta Asia</button>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section id="home" class="pane active">
+      <h2>Ringkasan</h2>
+      <p>Gunakan menu untuk melihat setiap visualisasi. Data bersifat simulatif dan dibuat untuk tugas visualisasi data.</p>
+    </section>
+
+    <section id="line" class="pane">
+      <h2>Tren Global Total Pengguna (2015–2024)</h2>
+      <canvas id="lineChart"></canvas>
+      <p class="desc">Menampilkan total agregat pengguna seluruh platform tiap tahun.</p>
+    </section>
+
+    <section id="bar" class="pane">
+      <h2>Jumlah Pengguna per Platform (tahun terpilih)</h2>
+      <div class="controls"><label for="yearBar">Pilih Tahun:</label>
+      <select id="yearBar"></select></div>
+      <canvas id="barChart"></canvas>
+      <p class="desc">Perbandingan jumlah pengguna tiap platform.</p>
+    </section>
+
+    <section id="pie" class="pane">
+      <h2>Proporsi Pengguna per Platform (tahun terpilih)</h2>
+      <canvas id="pieChart"></canvas>
+      <p class="desc">Persentase kontribusi tiap platform.</p>
+    </section>
+
+    <section id="hist" class="pane">
+      <h2>Histogram: Distribusi Total Pengguna Tahunan</h2>
+      <canvas id="histChart"></canvas>
+      <p class="desc">Frekuensi total pengguna dalam rentang nilai tertentu.</p>
+    </section>
+
+    <section id="scatter" class="pane">
+      <h2>Scatter: Total Pengguna vs Pertumbuhan (%)</h2>
+      <canvas id="scatterChart"></canvas>
+      <p class="desc">Hubungan antara total pengguna dan laju pertumbuhan.</p>
+    </section>
+
+    <section id="map" class="pane">
+      <h2>Peta Choropleth (Asia) - 2024</h2>
+      <div id="asia_map" style="width:100%;height:520px"></div>
+      <p class="desc">Peta menunjukkan jumlah pengguna per negara di Asia (tahun 2024).</p>
+    </section>
+  </main>
+
+  <footer>
+    <div>© 2025 Harry Zulkifli – Fakultas Teknologi Informasi, Universitas Sebelas April (UNSAP)</div>
+    <div class="small">by Harry Zulkifli</div>
+  </footer>
+
+  <script src="dataset.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
